@@ -1,0 +1,114 @@
+\documentclass[t]{beamer}
+
+\usetheme{HSE}
+
+%%% Работа с русским языком
+\usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext} 				% русские буквы в формулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+
+%%% Работа с картинками
+\usepackage{graphicx}  % Для вставки рисунков
+\graphicspath{{images/}{images2/}}  % папки с картинками
+\setlength\fboxsep{3pt} % Отступ рамки \fbox{} от рисунка
+\setlength\fboxrule{1pt} % Толщина линий рамки \fbox{}
+\usepackage{wrapfig} % Обтекание рисунков текстом
+
+%%% Работа с таблицами
+\usepackage{array,tabularx,tabulary,booktabs} % Дополнительная работа с таблицами
+\usepackage{longtable}  % Длинные таблицы
+\usepackage{multirow} % Слияние строк в таблице
+
+%%% Программирование
+\usepackage{etoolbox} % логические операторы
+
+%%% Другие пакеты
+\usepackage{lastpage} % Узнать, сколько всего страниц в документе.
+\usepackage{soul} % Модификаторы начертания
+\usepackage{csquotes} % Еще инструменты для ссылок
+%\usepackage[style=authoryear,maxcitenames=2,backend=biber,sorting=nty]{biblatex}
+\usepackage{multicol} % Несколько колонок
+
+%%% Картинки
+\usepackage{tikz} % Работа с графикой
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+
+\title{Разработка и исследование методов и алгоритмов анализа динамики предпочтений выбора компонентов программных систем}
+\author{Перепелицына Екатерина}
+\date{\today}
+\institute{УлГТУ}
+
+\begin{document}
+
+\frame[plain]{\titlepage}	% Титульный слайд
+
+\section{Цель}
+ 
+\begin{frame}
+		\frametitle{Цель}
+		\begin{quotation}
+			Целью работы является разработка методов и алгоритмов извлечения и анализа информации о подключаемых к проектам библиотеках из программных репозиториев.
+		\end{quotation}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Объект и предмет исследования}
+		\begin{quotation}
+			Объектом исследования являются открытые программные репозитории из системы контроля версий Github 
+		\end{quotation}
+		
+		\begin{quotation}
+			Предметом исследования является информация о подключаемых к проектам библиотеках
+		\end{quotation}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Задачи}
+		\begin{itemize}
+		    \item Выбор характеристик отбора программных репозиториев
+			\item Отбор программных репозиториев для формирования исходных данных для анализа по выбранным характеристикам
+			\item Выбор данных из репозиториев, необходимых для сохранения в бд
+			\item Извлечение информации о подключаемых библиотеках не зависимо от используемых систем сборки проектов
+			\item Анализ собранных данных
+		\end{itemize}
+	\end{frame}	
+	
+	\begin{frame}
+		\frametitle{Научная новизна}
+		\begin{quotation}
+			Научная новизна на данный момент не определена
+		\end{quotation}
+	\end{frame}
+
+	\begin{frame}
+	    \begin{quotation}
+			Исходными данными системы являются программные репозитории, отобранные по ряду параметров и полученные с помощью библиотеки Octokit через Github API
+		\end{quotation}
+		\frametitle{Исходные данные системы}
+		\begin{figure}
+        \includegraphics[width=150pt,height=120pt]{Octokit.png}
+        \caption{Библиотека Octokit}
+		\end{figure}
+	\end{frame}
+
+	\begin{frame} 
+		\frametitle{Положение выносимые на защиту}
+		\begin{itemize}
+			\item алгоритм извлечения информации о подключаемых библиотеках не зависимо от используемых систем сборки проектов
+			\item алгоритм прогноза популярности библиотек
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame} 
+		\frametitle{Обзор научных работ по схожей тематике}
+		\begin{itemize}
+		    \item Система обработки больших данных для анализа событий репозиторий GITHUB. Воинов Н.В., K. Родригес Гарсон, Никифоров И.В., Дробинцев П.Д.
+			\item Анализ данных для программных репозиториев. Д.Е. Намиот, В.Ю. Романов
+			\item Trend Prediction of GitHub using Time Series Analysis. T V Varuna, Anuraj Mohan
+		\end{itemize}
+	\end{frame}
+
+\end{document}
